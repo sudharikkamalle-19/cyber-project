@@ -1,0 +1,12 @@
+import joblib
+
+# Load the scaler object from the file
+scaler = joblib.load('scaler.pkl')
+
+# Access the attributes stored in the file
+print(f"Features the scaler was trained on: {scaler.feature_names_in_}")
+print(f"Mean values for each feature: {scaler.mean_}")
+print(f"Standard deviation (scale) for each feature: {scaler.scale_}")
+
+# Example: Using the scaler to transform new data
+# scaled_data = scaler.transform(new_data)

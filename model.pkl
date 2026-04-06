@@ -1,0 +1,13 @@
+import joblib
+
+# Load the model from the file
+model = joblib.load('model.pkl')
+
+# Inspect the model details
+print(f"Model Type: {type(model)}")
+print(f"Number of Estimators (Trees): {model.n_estimators}")
+print(f"Features in: {model.n_features_in_}")
+print(f"Classes: {model.classes_}")
+
+# To make a prediction (example)
+# result = model.predict(your_data)
